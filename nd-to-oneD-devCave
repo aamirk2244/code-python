@@ -1,0 +1,19 @@
+# Given a multi-demenstional array, write a function that takes
+# a multi-dimentional array and converts it to a one dimensional array
+# Example: [1, [2, 3], [[4]]] should return [1, 2, 3, 4].
+saveList = []
+def array(l):
+    if  isinstance(l, list):
+        for i in l:
+           # if not isinstance(i,list): saveList.append(i)
+            array(i)
+    else:
+        saveList.append(l)
+        
+        
+        
+    
+    
+    
+array( [[1,3,98],[3,98,[100,200]] ,[1,2,3], [3,45]])
+print(saveList)
